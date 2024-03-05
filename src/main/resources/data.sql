@@ -1,0 +1,10 @@
+INSERT INTO Persons (person_id, last_name, first_name, address, city) VALUES (1, 'Bravo', 'Johny', 'Długa 1', 'Katowice');
+INSERT INTO Persons (person_id, last_name, first_name, address, city) VALUES (2, 'Cena', 'Andrew', 'Prosta 14', 'Wrocław');
+INSERT INTO Persons (person_id, last_name, first_name, address, city) VALUES (3, 'Kowalski', 'Jan', 'Krótka 7', 'Warszawa');
+INSERT INTO Persons (person_id, last_name, first_name, address, city) VALUES (4, 'Nowak', 'Anna', 'Słoneczna 3', 'Kraków');
+INSERT INTO Persons (person_id, last_name, first_name, address, city) VALUES (5, 'Smith', 'Emma', 'Główna 22', 'Gdańsk');
+INSERT INTO Persons (person_id, last_name, first_name, address, city) VALUES (6, 'Johnson', 'Michael', 'Szkolna 5', 'Poznań');
+INSERT INTO Persons (person_id, last_name, first_name, address, city) VALUES (7, 'Lee', 'Sophia', 'Kwiatowa 11', 'Szczecin');
+INSERT INTO Persons (person_id, last_name, first_name, address, city) VALUES (8, 'Gonzalez', 'Luis', 'Lipowa 9', 'Łódź');
+INSERT INTO Persons (person_id, last_name, first_name, address, city) VALUES (9, 'Martinez', 'Isabella', 'Morska 4', 'Bydgoszcz');
+INSERT INTO Persons (person_id, last_name, first_name, address, city) VALUES (10, 'Anderson', 'Oliver', 'Łąkowa 8', 'Białystok');
