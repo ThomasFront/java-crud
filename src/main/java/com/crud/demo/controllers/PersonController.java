@@ -1,11 +1,10 @@
 package com.crud.demo.controllers;
 
+import com.crud.demo.data.PersonDTO;
 import com.crud.demo.entities.Person;
 import com.crud.demo.services.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,5 +21,14 @@ public class PersonController {
     @GetMapping("/persons")
     public List<Person> getPersons(){
         return personService.getPersons();
+    }
+
+    @PostMapping("/persons")
+    public PersonDTO createPerson(@RequestBody PersonDTO person){
+        return personService.createPerson(person);
+    }
+    @PutMapping("/persons/{personId}")
+    public PersonDTO createPerson(@RequestBody PersonDTO person, @PathVariable Integer personId){
+        return personService.createPersonWithId(person, personId);
     }
 }

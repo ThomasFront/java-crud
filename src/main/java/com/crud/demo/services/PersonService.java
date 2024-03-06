@@ -1,5 +1,6 @@
 package com.crud.demo.services;
 
+import com.crud.demo.data.PersonDTO;
 import com.crud.demo.entities.Person;
 import com.crud.demo.repositories.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,20 @@ public class PersonService {
 
     @Transactional
     public List<Person> getPersons(){
-        List<Person> persons = personRepository.findAllCustom();
-        return persons;
+        return personRepository.findAll();
+    }
+
+    @Transactional
+    public PersonDTO createPerson(PersonDTO person) {
+        Person personEntity = PersonDTO.fromPersonDTO(person);
+        Person savedPerson = personRepository.save(personEntity);
+        return PersonDTO.fromPerson(savedPerson);
+    }
+
+    @Transactional
+    public PersonDTO createPersonWithId(PersonDTO personDTO, Integer personId){
+        Person personEntity = PersonDTO.fromPersonDTO(personDTO, personId);
+        personRepository.save(personEntity);
+        return personDTO;
     }
 }
